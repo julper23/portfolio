@@ -34,10 +34,12 @@ export function App () {
       <main id="main">
         <header></header>
         <section style={{width:"100%",backgroundColor:"rgb(0,255,0,0.5)"}}>
-            <div>IMG</div>
-            <p>¡Bienvenido!</p>
-            <p>Soy Julen Pérez Coca, Junior Front-End developer</p>
-            <span>Y me gusta </span><span className='letrasCambiantes'>{meGusta[textMeGusta]}</span>
+            <div style={{backgroundColor:"gray",height:"150px",width:"150px",borderRadius:100}}></div>
+            <div>
+                <p>¡Bienvenido!</p>
+                <p>Soy Julen Pérez Coca, Junior Front-End developer</p>
+                <span>Y me gusta </span><span className='letrasCambiantes'>{meGusta[textMeGusta]}</span>
+            </div>
         </section>
         <section>Personal: Acerca de mi, CV, redes sociales</section>
         <section>Habilidades</section>
