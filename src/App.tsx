@@ -18,15 +18,16 @@ const delay = () => new Promise(res => setTimeout(res, 2000));
 const cambiarMeGusta = async(i:number) => {
   await delay()
   
-    if(i === meGusta.length -1 ) {
-        setTextMeGusta(0)
-    }else{
-        setTextMeGusta(i+1)
-    }
+  if(i === meGusta.length -1 ) {
+    setTextMeGusta(0)
+  }else{
+    setTextMeGusta(i+1)
+  }
 }
 
 useEffect(()=>{
   cambiarMeGusta(textMeGusta)
+  // eslint-disable-next-line
 },[textMeGusta])
 
 
