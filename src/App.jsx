@@ -31,20 +31,24 @@ export function App () {
     
     
     return (
-      <main id="main">
-        <header></header>
-        <section style={{width:"100%",backgroundColor:"rgb(0,255,0,0.5)"}}>
-            <div style={{backgroundColor:"gray",height:"150px",width:"150px",borderRadius:100}}></div>
-            <div>
-                <p>¡Bienvenido!</p>
-                <p>Soy Julen Pérez Coca, Junior Front-End developer</p>
-                <span>Y me gusta </span><span className='letrasCambiantes'>{meGusta[textMeGusta]}</span>
-            </div>
+      <main>
+        <header style={{width:"100%",backgroundColor:"black",height:25}}></header>
+        <section style={{width:"100%",minHeight:200,backgroundColor:"rgb(255,0,0,0.5)",display:"flex",flexDirection:"row",justifyContent:"center"}}>
+          <div id="FotoPersonal" style={{height:"auto",backgroundColor:"blue",display:"flex",alignContent:"center",alignItems:"center"}}>
+            <img alt="imagen de julen perez" src="./../public/imgs/fotoPersonal.jpeg" style={{width:"150px",height:"150px",borderRadius:100}}/>
+          </div>
+          <div id="InfoPersonal" style={{height:"auto",backgroundColor:"gray",display:"flex",flexDirection:"column",justifyContent:"center",padding:25}}>
+            <span>¡Bienvenido!</span>
+            <span>Soy Julen Pérez Coca, Junior Front-End developer</span>
+            <div><span>Y me gusta </span><span className='letrasCambiantes'>{meGusta[textMeGusta]}</span></div>
+          </div>
         </section>
+        {/*
         <section>Personal: Acerca de mi, CV, redes sociales</section>
         <section>Habilidades</section>
         <section>Projectos recientes</section>
         <section>Contacto</section>
+        */}
     </main>
     )
 }
