@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import TextoCambiante from './componentes/textoCambiante/index.jsx'
 import colors from "./../theme/colors";
+import miFoto from "../assets/fotoPersonal.jpeg"
 export function App () {
 
     const meGusta = [
@@ -37,7 +38,7 @@ export function App () {
         <header style={{width:"100%",backgroundColor:"black",height:25}}></header>
         <section style={{width:"100%",minHeight:200,backgroundColor:colors.meta,display:"flex",flexDirection:"row",justifyContent:"center"}}>
           <div id="FotoPersonal" style={{height:"auto",display:"flex",alignContent:"center",alignItems:"center"}}>
-            <img alt="imagen de julen perez" src="./../public/imgs/fotoPersonal.jpeg" style={{width:"150px",height:"150px",borderRadius:100}}/>
+            <img alt="imagen de julen perez" src={miFoto} style={{width:"150px",height:"150px",borderRadius:100}}/>
           </div>
           <div id="InfoPersonal" style={{height:"auto",display:"flex",flexDirection:"column",justifyContent:"center",padding:25}}>
             <span>¡Bienvenido!</span>
