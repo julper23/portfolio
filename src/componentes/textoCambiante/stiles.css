@@ -1,0 +1,16 @@
+
+.letrasCambiantes{
+    color: #0000FF;
+    animation: color 2s infinite;
+    font-size: large;
+    opacity: 0 ;
+    font-weight: bold;
+}
+  
+@keyframes color {
+    0% { opacity: 0 ; }
+    25% { opacity: 0.5 ;  }
+    50% { opacity: 1 ;  }
+    75% { opacity: 0.5 ;  }
+    100% { opacity: 0 ;  }
+}
