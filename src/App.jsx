@@ -57,7 +57,19 @@ export function App () {
       </div>
       <div style={{height:"15px",backgroundColor:colors.primary}}/>
       <div style={{width:"100%",minWidth:"150px",minHeight:200,backgroundColor:colors.meta,display:"flex",flexDirection:"row",justifyContent:"center",flexWrap:"wrap"}}>
-        
+      {/*REDES SOCIALES Y CV*/}
+      </div>
+      <div style={{height:"15px",backgroundColor:colors.primary}}/>
+      <div style={{width:"100%",minWidth:"150px",minHeight:200,backgroundColor:colors.meta,display:"flex",flexDirection:"row",justifyContent:"center",flexWrap:"wrap"}}>
+      {/*Habilidades */}
+      </div>
+      <div style={{height:"15px",backgroundColor:colors.primary}}/>
+      <div style={{width:"100%",minWidth:"150px",minHeight:200,backgroundColor:colors.meta,display:"flex",flexDirection:"row",justifyContent:"center",flexWrap:"wrap"}}>
+      {/*Projectos recientes*/}
+      </div>
+      <div style={{height:"15px",backgroundColor:colors.primary}}/>
+      <div style={{width:"100%",minWidth:"150px",minHeight:200,backgroundColor:colors.meta,display:"flex",flexDirection:"row",justifyContent:"center",flexWrap:"wrap"}}>
+      {/*Contacto*/}
       </div>
       {/*
       <section>Personal: Acerca de mi, CV, redes sociales</section>
