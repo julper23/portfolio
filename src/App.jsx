@@ -35,8 +35,8 @@ export function App () {
     
     return (
       <main>
-        <header style={{width:"100%",backgroundColor:"black",height:25}}></header>
-        <section style={{width:"100%",minHeight:200,backgroundColor:colors.meta,display:"flex",flexDirection:"row",justifyContent:"center"}}>
+        <header style={{width:"100%",minWidth:"150px",backgroundColor:"black",height:25}}></header>
+        <section style={{width:"100%",minWidth:"150px",minHeight:200,backgroundColor:colors.meta,display:"flex",flexDirection:"row",justifyContent:"center",flexWrap:"wrap"}}>
           <div id="FotoPersonal" style={{height:"auto",display:"flex",alignContent:"center",alignItems:"center"}}>
             <img alt="imagen de julen perez" src={miFoto} style={{width:"150px",height:"150px",borderRadius:100}}/>
           </div>
