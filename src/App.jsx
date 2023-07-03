@@ -34,15 +34,15 @@ export function App () {
   return (
     <main>
       <Header/>
-      <section style={{width:"100%",minWidth:"150px",minHeight:200,backgroundColor:colors.meta,display:"flex",flexDirection:"row",justifyContent:"center",flexWrap:"wrap"}}>
+      <div style={{width:"100%",minWidth:"150px",minHeight:200,backgroundColor:colors.meta,display:"flex",flexDirection:"row",justifyContent:"center",flexWrap:"wrap"}}>
         <div id="FotoPersonal" style={{height:"auto",display:"flex",alignContent:"center",alignItems:"center"}}>
           <img alt="imagen de julen perez" src={miFoto} style={{width:"150px",height:"150px",borderRadius:100}}/>
         </div>
         <div id="InfoPersonal" style={{height:"auto",display:"flex",flexDirection:"column",justifyContent:"center",padding:25}}>
           <span>¡Bienvenido!</span>
           <span>Soy Julen Pérez Coca, Junior Front-End developer</span>
-          <section>
-            <section className="inline">
+          <div>
+            <div className="inline">
               Y me gusta
               <ReactTextTransition
                 springConfig={presets.gentle}
@@ -51,11 +51,14 @@ export function App () {
               >
                 {meGusta[textIndex]}
               </ReactTextTransition>
-            </section>
-          </section>
+            </div>
+          </div>
         </div>
-      </section>
-      <secton></secton>
+      </div>
+      <div style={{height:"15px",backgroundColor:colors.primary}}/>
+      <div style={{width:"100%",minWidth:"150px",minHeight:200,backgroundColor:colors.meta,display:"flex",flexDirection:"row",justifyContent:"center",flexWrap:"wrap"}}>
+        
+      </div>
       {/*
       <section>Personal: Acerca de mi, CV, redes sociales</section>
       <section>Habilidades</section>
