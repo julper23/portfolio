@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import './App.css';
 import TextoCambiante from './componentes/textoCambiante/index.jsx'
+import Header from './componentes/header';
 import colors from "./../theme/colors";
 import miFoto from "../assets/fotoPersonal.jpeg"
 import ReactTextTransition, { presets } from "react-text-transition";
@@ -32,6 +33,7 @@ export function App () {
 
   return (
     <main>
+      <Header/>
       <section style={{width:"100%",minWidth:"150px",minHeight:200,backgroundColor:colors.meta,display:"flex",flexDirection:"row",justifyContent:"center",flexWrap:"wrap"}}>
         <div id="FotoPersonal" style={{height:"auto",display:"flex",alignContent:"center",alignItems:"center"}}>
           <img alt="imagen de julen perez" src={miFoto} style={{width:"150px",height:"150px",borderRadius:100}}/>
