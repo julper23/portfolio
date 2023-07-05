@@ -5,7 +5,7 @@ import Header from './componentes/header';
 import colors from "./../theme/colors";
 import miFoto from "../assets/fotoPersonal.jpeg"
 import ReactTextTransition, { presets } from "react-text-transition";
-
+import { AiFillInstagram, AiFillLinkedin, AiFillFilePdf } from "react-icons/ai";
 export function App () {
 
   const meGusta = [
@@ -18,15 +18,16 @@ export function App () {
   const redesSociales = [
     {
       name:"CV",
-      logo:"C"
+      logo:<AiFillFilePdf size="100%"/>
     },
     {
       name:"Linkeding",
-      logo:"L"
+      logo:<AiFillLinkedin size="100%"/>
     },
     {
       name:"Instagram",
-      logo:"I"
+      logo:<AiFillInstagram size="100%"/>
+      
     }
   ]
 
@@ -90,9 +91,9 @@ export function App () {
     };
   }, []);
 
-  const BotonSocial = ({text}) => {
+  const BotonSocial = ({icon}) => {
     return(
-      <button style={{height:"50px",width:"50px",margin:"2px",borderRadius:"15px",cursor:"pointer"}} onClick={()=>{console.log(text);}}>{text}</button>
+      <button style={{height:"50px",width:"50px",margin:"2px",borderRadius:"15px",cursor:"pointer"}}>{icon}</button>
     )
   }
 
@@ -132,7 +133,7 @@ export function App () {
       {/*REDES SOCIALES Y CV*/}
       <div style={{width:"100%",minWidth:"150px",height:60,backgroundColor:colors.calmado,display:"flex",flexDirection:"row",justifyContent:"center",alignContent:"center",flexWrap:"wrap"}}>
         {redesSociales.map((rrss)=>{
-          return(<BotonSocial key={rrss.name} text={rrss.logo}/>)
+          return(<BotonSocial key={rrss.name} icon={rrss.logo}/>)
         })}
       </div>
     <Separador/>
