@@ -105,9 +105,9 @@ export function App () {
       <Header/>
 
       {/*SECCION PRINCIPAL*/}
-      <div style={{width:"100%",minWidth:"150px",minHeight:200,backgroundColor:colors.meta,display:"flex",flexDirection:"row",justifyContent:"center",flexWrap:"wrap"}}>
+      <div style={{width:"100%",minWidth:"150px",minHeight:200,backgroundColor:colors.calmado,display:"flex",flexDirection:"row",justifyContent:"center",flexWrap:"wrap"}}>
         <div id="FotoPersonal" style={{height:"auto",display:"flex",alignContent:"center",alignItems:"center"}}>
-          <img alt="imagen de julen perez" src={miFoto} style={{width:"150px",height:"150px",borderRadius:100}}/>
+          <img alt="imagen de julen perez" src={miFoto} loading="lazy" style={{width:"150px",height:"150px",borderRadius:100}}/>
         </div>
         <div id="InfoPersonal" style={{height:"auto",display:"flex",flexDirection:"column",justifyContent:"center",padding:25}}>
           <span>¡Bienvenido!</span>
@@ -130,26 +130,26 @@ export function App () {
     <Separador/>
 
       {/*REDES SOCIALES Y CV*/}
-      <div style={{width:"100%",minWidth:"150px",height:60,backgroundColor:colors.meta,display:"flex",flexDirection:"row",justifyContent:"center",alignContent:"center",flexWrap:"wrap"}}>
+      <div style={{width:"100%",minWidth:"150px",height:60,backgroundColor:colors.calmado,display:"flex",flexDirection:"row",justifyContent:"center",alignContent:"center",flexWrap:"wrap"}}>
         {redesSociales.map((rrss)=>{
           return(<BotonSocial key={rrss.name} text={rrss.logo}/>)
         })}
       </div>
     <Separador/>
         {/*Habilidades */}
-      <div style={{width:"100%",minWidth:"150px",minHeight:200,backgroundColor:colors.meta,display:"flex",flexDirection:"row",justifyContent:"center",alignContent:"center",flexWrap:"wrap"}}>
+      <div style={{width:"100%",minWidth:"150px",minHeight:200,backgroundColor:colors.calmado,display:"flex",flexDirection:"row",justifyContent:"center",alignContent:"center",flexWrap:"wrap"}}>
         {habilidades.map((habilidad)=>{
           return(<BotonSocial key={habilidad.name} text={habilidad.logo}/>)
         })}
       </div>
     <Separador/>
       {/*Projectos recientes*/}
-      <div style={{width:"100%",minWidth:"150px",minHeight:200,backgroundColor:colors.meta,display:"flex",flexDirection:"row",justifyContent:"center",flexWrap:"wrap"}}>
+      <div style={{width:"100%",minWidth:"150px",minHeight:200,backgroundColor:colors.calmado,display:"flex",flexDirection:"row",justifyContent:"center",flexWrap:"wrap"}}>
 
       </div>
     <Separador/>
       {/*Contacto*/}
-      <div style={{width:"100%",minWidth:"150px",minHeight:200,backgroundColor:colors.meta,display:"flex",flexDirection:"row",justifyContent:"center",flexWrap:"wrap"}}>
+      <div style={{width:"100%",minWidth:"150px",minHeight:200,backgroundColor:colors.calmado,display:"flex",flexDirection:"row",justifyContent:"center",flexWrap:"wrap"}}>
 
       </div>
       {/*
