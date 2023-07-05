@@ -5,76 +5,8 @@ import Header from './componentes/header';
 import colors from "./../theme/colors";
 import miFoto from "../assets/fotoPersonal.jpeg"
 import ReactTextTransition, { presets } from "react-text-transition";
-import { AiFillInstagram, AiFillLinkedin, AiFillFilePdf } from "react-icons/ai";
+import {meGusta, redesSociales, habilidades} from "./data"
 export function App () {
-
-  const meGusta = [
-    "trabajar en equipo",
-    "aprender",
-    "resolver problemas",
-    "programar"
-  ]
-
-  const redesSociales = [
-    {
-      name:"CV",
-      logo:<AiFillFilePdf size="100%"/>
-    },
-    {
-      name:"Linkeding",
-      logo:<AiFillLinkedin size="100%"/>
-    },
-    {
-      name:"Instagram",
-      logo:<AiFillInstagram size="100%"/>
-      
-    }
-  ]
-
-  const habilidades = [
-    {
-      name:"CSS",
-      logo:"CSS"
-    },
-    {
-      name:"HTML",
-      logo:"HTML"
-    },
-    {
-      name:"Java",
-      logo:"Java"
-    },
-    {
-      name:"JavaScript",
-      logo:"JS"
-    },
-    {
-      name:"MySQL",
-      logo:"MS"
-    },
-    {
-      name:"PHP",
-      logo:"PHP"
-    },
-    {
-      name:"Python",
-      logo:"P"
-    },
-    {
-      name:"React",
-      logo:"R"
-    },
-    {
-      name:"React Native",
-      logo:"R N"
-    },
-    {
-      name:"TypeScript",
-      logo:"TS"
-    }
-  ]
-
-
 
   const intvl = useRef(null);
 
@@ -91,7 +23,13 @@ export function App () {
     };
   }, []);
 
-  const BotonSocial = ({icon}) => {
+  const BotonSocial = (rrss) => {
+    return(
+      <button onClick={()=>{rrss.rrss.url&&window.open(rrss.rrss.url)}} style={{height:"50px",width:"50px",margin:"2px",borderRadius:"15px",cursor:"pointer"}}>{rrss.rrss.logo}</button>
+    )
+  }
+
+  const BotonHabilida = ({icon}) => {
     return(
       <button style={{height:"50px",width:"50px",margin:"2px",borderRadius:"15px",cursor:"pointer"}}>{icon}</button>
     )
@@ -133,14 +71,14 @@ export function App () {
       {/*REDES SOCIALES Y CV*/}
       <div style={{width:"100%",minWidth:"150px",height:60,backgroundColor:colors.calmado,display:"flex",flexDirection:"row",justifyContent:"center",alignContent:"center",flexWrap:"wrap"}}>
         {redesSociales.map((rrss)=>{
-          return(<BotonSocial key={rrss.name} icon={rrss.logo}/>)
+          return(<BotonSocial key={rrss.name} rrss={rrss}/>)
         })}
       </div>
     <Separador/>
         {/*Habilidades */}
       <div style={{width:"100%",minWidth:"150px",minHeight:200,backgroundColor:colors.calmado,display:"flex",flexDirection:"row",justifyContent:"center",alignContent:"center",flexWrap:"wrap"}}>
         {habilidades.map((habilidad)=>{
-          return(<BotonSocial key={habilidad.name} text={habilidad.logo}/>)
+          return(<BotonHabilida key={habilidad.name} icon={habilidad.logo}/>)
         })}
       </div>
     <Separador/>
