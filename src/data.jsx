@@ -1,5 +1,14 @@
 import { AiFillInstagram, AiFillLinkedin, AiFillFilePdf } from "react-icons/ai";
-
+import CSS from "../assets/skills/CSS.png"
+import HTML from "../assets/skills/HTML.png"
+import JAVA from "../assets/skills/JAVA.png"
+import JS from "../assets/skills/JS.png"
+import MYSQL from "../assets/skills/MYSQL.png"
+import PHP from "../assets/skills/PHP.png"
+import PYTHON from "../assets/skills/PYTHON.png"
+import REACT from "../assets/skills/REACT.png"
+import TS from "../assets/skills/TS.png"
+import NODE from "../assets/skills/NODE.svg"
 export const meGusta = [
     "trabajar en equipo",
     "aprender",
@@ -28,42 +37,82 @@ export const redesSociales = [
   export const habilidades = [
     {
       name:"CSS",
-      logo:"CSS"
+      logo:CSS,
+      web:true,
+      movil:true,
+      backend:false,
+      lenguajes:false
     },
     {
       name:"HTML",
-      logo:"HTML"
+      logo:HTML,
+      web:true,
+      movil:false,
+      backend:false,
+      lenguajes:false
     },
     {
       name:"Java",
-      logo:"Java"
+      logo:JAVA,
+      web:false,
+      movil:false,
+      backend:false,
+      lenguajes:true
     },
     {
       name:"JavaScript",
-      logo:"JS"
+      logo:JS,
+      web:true,
+      movil:true,
+      backend:true,
+      lenguajes:true
     },
     {
       name:"MySQL",
-      logo:"MS"
+      logo:MYSQL,
+      web:false,
+      movil:false,
+      backend:true,
+      lenguajes:false
     },
     {
       name:"PHP",
-      logo:"PHP"
+      logo:PHP,
+      web:true,
+      movil:false,
+      backend:false,
+      lenguajes:false
     },
     {
       name:"Python",
-      logo:"P"
+      logo:PYTHON,
+      web:false,
+      movil:false,
+      backend:false,
+      lenguajes:true
     },
     {
       name:"React",
-      logo:"R"
-    },
-    {
-      name:"React Native",
-      logo:"R N"
+      logo:REACT,
+      web:true,
+      movil:true,
+      backend:true,
+      lenguajes:false
     },
     {
       name:"TypeScript",
-      logo:"TS"
+      logo:TS,
+      web:true,
+      movil:true,
+      backend:false,
+      lenguajes:false
+    },
+    {
+      name:"Node",
+      logo:NODE,
+      web:true,
+      movil:true,
+      backend:true,
+      lenguajes:false
     }
   ]
