@@ -43,7 +43,7 @@ const App = React.memo(() => {
  
 
   return (
-    <main>
+    <main style={{height:"100%",background:"linear-gradient(#e66465, #9198e5)"}}>
       <Header/>
 
       {/*SECCION PRINCIPAL*/}
@@ -98,16 +98,26 @@ const App = React.memo(() => {
           return(<BotonHabilida key={habilidad.name} icon={habilidad.logo}/>)
         })}
       </div>
+      {/*<Separador/>
+      {/*Experiencia*/}
+      {/*<div style={{width:"100%",minWidth:"150px",minHeight:200,backgroundColor:colors.calmado,display:"flex",flexDirection:"row",justifyContent:"center",flexWrap:"wrap"}}></div>
+      <Separador/>
+      {/*Estudios*/}
+      {/*<div style={{width:"100%",minWidth:"150px",minHeight:200,backgroundColor:colors.calmado,display:"flex",flexDirection:"row",justifyContent:"center",flexWrap:"wrap"}}></div>
+      <Separador/>
+      {/*Cursos*/}
+      {/*<div style={{width:"100%",minWidth:"150px",minHeight:200,backgroundColor:colors.calmado,display:"flex",flexDirection:"row",justifyContent:"center",flexWrap:"wrap"}}>
+      </div>
     <Separador/>
       {/*Projectos recientes*/}
-      <div style={{width:"100%",minWidth:"150px",minHeight:200,backgroundColor:colors.calmado,display:"flex",flexDirection:"row",justifyContent:"center",flexWrap:"wrap"}}>
+      {/*<div style={{width:"100%",minWidth:"150px",minHeight:200,backgroundColor:colors.calmado,display:"flex",flexDirection:"row",justifyContent:"center",flexWrap:"wrap"}}>
 
       </div>
     <Separador/>
       {/*Contacto*/}
-      <div style={{width:"100%",minWidth:"150px",minHeight:200,backgroundColor:colors.calmado,display:"flex",flexDirection:"row",justifyContent:"center",flexWrap:"wrap"}}>
+      {/*<div style={{width:"100%",minWidth:"150px",minHeight:200,backgroundColor:colors.calmado,display:"flex",flexDirection:"row",justifyContent:"center",flexWrap:"wrap"}}>
 
-      </div>
+      </div>*/}
       {/*
 
       TERMINADO-------
@@ -119,6 +129,9 @@ const App = React.memo(() => {
 
 
       POR EMPEZAR-----
+      <section>Experiencia</section>
+      <section>Estudios</section>
+      <section>Cursos</section>
       <section>Projectos recientes</section>
       <section>Contacto</section>
       */}

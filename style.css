@@ -3,12 +3,8 @@ body {
   margin: 0;
   /*display: flex;
   place-items: center;*/
-  height: 100vh;
+  height: 100%;
   width: 100%;
-
-  background: #363753;
-}
-
-main {
-  background-color: antiquewhite;
+  background-color: #363753;
+  
 }
