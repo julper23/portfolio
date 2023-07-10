@@ -1,4 +1,4 @@
-import { AiFillInstagram, AiFillLinkedin, AiFillFilePdf } from "react-icons/ai";
+import { AiFillInstagram, AiFillLinkedin, AiFillFilePdf, AiFillGithub } from "react-icons/ai";
 import CSS from "../assets/skills/CSS.png"
 import HTML from "../assets/skills/HTML.png"
 import JAVA from "../assets/skills/JAVA.png"
@@ -9,6 +9,9 @@ import PYTHON from "../assets/skills/PYTHON.png"
 import REACT from "../assets/skills/REACT.png"
 import TS from "../assets/skills/TS.png"
 import NODE from "../assets/skills/NODE.svg"
+
+import Parejas from "../assets/fotosProyectos/juegoJuntaParejas.png"
+
 export const meGusta = [
     "trabajar en equipo",
     "aprender",
@@ -19,18 +22,38 @@ export const meGusta = [
 export const redesSociales = [
     {
       name:"CV",
-      logo:<AiFillFilePdf size="100%"/>
+      url:"../assets/CV_Julen_Perez_Coca.pdf",
+      logo:<AiFillFilePdf size="100%"/>,
+      download:true
+    },
+    {
+      name:"GitHub",
+      url:"https://github.com/julper23",
+      logo:<AiFillGithub size="100%"/>,
+      download:false
     },
     {
       name:"Linkeding",
       url:"https://www.linkedin.com/in/julen-perez-coca/",
-      logo:<AiFillLinkedin size="100%"/>
+      logo:<AiFillLinkedin size="100%"/>,
+      download:false
     },
     {
       name:"Instagram",
       url:"https://www.instagram.com/julper23",
-      logo:<AiFillInstagram size="100%"/>
+      logo:<AiFillInstagram size="100%"/>,
+      download:false
       
+    }
+  ]
+
+  export const proyectos = [
+    {
+      nombre:"Juego Junta Parejas",
+      descripcion:"Juego donde el usuario tiene que encontrar todas las parejas",
+      tecnologias:"Este proyecto esta hecho con vite, React, Node.js, TypeScrip y JavaScript",
+      url:"https://github.com/julper23/juegoJuntaLasParejas",
+      img:"../assets/fotosProyectos/juegoJuntaParejas.png"
     }
   ]
 

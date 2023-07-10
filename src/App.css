@@ -25,6 +25,11 @@
   font-weight: bold;
 }
 
+.botonSocial:hover {
+  filter: drop-shadow(0px 0px 2px rgb(255 255 255 / 0.7));
+}
+
+
 @keyframes color {
   0% { opacity: 0 ; }
   25% { opacity: 0.5 ;  }
@@ -64,4 +69,28 @@
 /* Teléfonos */
 @media only screen and (max-width: 575px){
 
+}
+
+.contenedor {
+  position: relative;
+  width: 230px;
+  height: 140px;
+  transition: opacity 0.3s ease;
+}
+
+.tarjeta-informacion {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 230px;
+  height: 140px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.contenedor:hover .tarjeta-informacion {
+  opacity: 1;
 }

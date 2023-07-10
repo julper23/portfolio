@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './stiles.css';
+import './styles.css';
 
 const TextoCambiante = ({textoArray}) => {
     const [text,setText] = useState(0);
