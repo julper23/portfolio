@@ -53,7 +53,7 @@ export const redesSociales = [
       descripcion:"Juego donde el usuario tiene que encontrar todas las parejas",
       tecnologias:"Este proyecto esta hecho con vite, React, Node.js, TypeScrip y JavaScript",
       url:"https://github.com/julper23/juegoJuntaLasParejas",
-      img:"../assets/fotosProyectos/juegoJuntaParejas.png"
+      img:Parejas
     }
   ]
 
