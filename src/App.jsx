@@ -11,7 +11,7 @@ import miFoto from "../assets/fotoPersonal.jpeg";
 
 import Header from './componentes/header';
 import BotonSocial from './componentes/botonSocial';
-
+import { AiFillEye } from "react-icons/ai";
 
 const BotonHabilida = ({icon}) => {
   return(
@@ -30,17 +30,20 @@ const Titulo = ({texto}) => {
 }
 
 const PanelProyecto = ({proyecto}) => {
-  console.log(proyecto)
-  console.log(proyecto.img);
+
   /*
   <div style={{width:"230px",height:"140px",backgroundImage:'url(' + proyecto.img + ')',backgroundSize:"cover"}}>
     
   </div>
   */
-  return(<div class="contenedor" style={{backgroundImage:'url(' + proyecto.img + ')',backgroundSize:"cover"}}>
-  <div class="tarjeta-informacion">
-    <h2>Título de la tarjeta</h2>
-    <p>Contenido de la tarjeta de información.</p>
+  return(<div className="contenedor" key={proyecto.nombre} style={{backgroundImage:'url(' + proyecto.img + ')',backgroundSize:"cover"}}>
+  <div className="tarjeta-informacion">
+    <div style={{width:"100%",height:"30%",color:"white",fontWeight:"bold",fontSize:"large",display:"flex",alignItems:"center",justifyContent:"center"}}>
+      {proyecto.nombre}
+    </div>
+    <div style={{width:"100%",height:"70%",display:"flex",justifyContent:"flex-end",alignItems:"flex-end"}}>
+      {/*<button style={{cursor:"pointer",borderRadius:"500px",display:"flex",alignItems:"center"}}>{<AiFillEye style={{fontSize:"25px"}}/>}</button>*/}
+    </div>
   </div>
 </div>
   

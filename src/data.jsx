@@ -49,7 +49,7 @@ export const redesSociales = [
 
   export const proyectos = [
     {
-      nombre:"Juego Junta Parejas",
+      nombre:"Juego busca parejas",
       descripcion:"Juego donde el usuario tiene que encontrar todas las parejas",
       tecnologias:"Este proyecto esta hecho con vite, React, Node.js, TypeScrip y JavaScript",
       url:"https://github.com/julper23/juegoJuntaLasParejas",
