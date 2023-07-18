@@ -22,7 +22,7 @@ export const meGusta = [
 export const redesSociales = [
     {
       name:"CV",
-      url:"../assets/CV_Julen_Perez_Coca.pdf",
+      url:"/assets/CV_Julen_Perez_Coca.pdf",
       logo:<AiFillFilePdf size="100%"/>,
       download:true
     },

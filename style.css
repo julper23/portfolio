@@ -11,7 +11,10 @@ body {
 /*
 Colores
 
-Fondo: #55585B
+Fondo: #454545
+
+background:"linear-gradient(145deg, #3e3e3e, #4a4a4a)",boxShadow:"9px 9px 18px #1c1c1c, -9px -9px 18px #6e6e6e"
+
 
 Titulos: linear-gradient(135deg, #60A9FF 10%, #D187FF 90%)
 Titulo Fuente: Barlow (Bold)
