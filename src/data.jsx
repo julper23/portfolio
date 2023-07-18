@@ -11,6 +11,7 @@ import TS from "../assets/skills/TS.png"
 import NODE from "../assets/skills/NODE.svg"
 
 import Parejas from "../assets/fotosProyectos/juegoJuntaParejas.png"
+import PDF from "../assets/CV_Julen_Perez_Coca.pdf"
 
 export const meGusta = [
     "trabajar en equipo",
@@ -22,7 +23,7 @@ export const meGusta = [
 export const redesSociales = [
     {
       name:"CV",
-      url:"/assets/CV_Julen_Perez_Coca.pdf",
+      url:PDF,
       logo:<AiFillFilePdf size="100%"/>,
       download:true
     },
