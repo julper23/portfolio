@@ -11,6 +11,8 @@ import TS from "../assets/skills/TS.png"
 import NODE from "../assets/skills/NODE.svg"
 
 import Parejas from "../assets/fotosProyectos/juegoJuntaParejas.png"
+import Cronometro from "../assets/fotosProyectos/cronometro.png"
+
 import PDF from "../assets/CV_Julen_Perez_Coca.pdf"
 
 export const meGusta = [
@@ -55,6 +57,13 @@ export const redesSociales = [
       tecnologias:"Este proyecto esta hecho con vite, React, Node.js, TypeScrip y JavaScript",
       url:"https://github.com/julper23/juegoJuntaLasParejas",
       img:Parejas
+    },
+    {
+      nombre:"Cronometro",
+      descripcion:"Cronometro simple donde se puede pausar, parar, reiniciar y retomar una cuenta",
+      tecnologias:"Este proyecto esta hecho con vite, React, Node.js, TypeScrip y JavaScript",
+      url:"https://github.com/julper23/cronometro",
+      img:Cronometro
     }
   ]
 
