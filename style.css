@@ -5,6 +5,26 @@ body {
   place-items: center;*/
   height: 100%;
   width: 100%;
-  background-color: #363753;
+  background-color: #282C32;
   
+}
+/*
+Colores
+
+Fondo: #282C32
+
+Titulos: linear-gradient(135deg, #60A9FF 10%, #D187FF 90%)
+Titulo Fuente: Barlow (Bold)
+
+
+Texto: #EEEFF5
+Texto Fuente: Montserrat (Regular)
+
+Fondo Botones:  linear-gradient(135deg, #60A9FF 10%, #D187FF 90%)
+Texto Botones: #282C32
+
+*/
+#root{
+  height: 100%;
+  width: 100%;
 }
