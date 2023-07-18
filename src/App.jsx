@@ -75,7 +75,7 @@ const App = React.memo(() => {
     <header style={{position:"fixed",backgroundColor:"black",width:"100%",height:"50px",zIndex:"999999"}}></header>
 
 {/*SECCION PRINCIPAL*/}
-    <div style={{borderRadius:"50px",background:"linear-gradient(145deg, #454647, #525355)",boxShadow:"9px 9px 18px #1f1f20,-9px -9px 18px #7b7d7e",width:"85%",minWidth:"150px",minHeight:200,display:"flex",flexDirection:"row",marginTop:"75px",justifyContent:"center",flexWrap:"wrap"}} id="Inicio">
+    <div style={{borderRadius:"50px",background:"linear-gradient(145deg, #3e3e3e, #4a4a4a)",boxShadow:"9px 9px 18px #1c1c1c, -9px -9px 18px #6e6e6e",width:"85%",minWidth:"150px",minHeight:200,display:"flex",flexDirection:"row",marginTop:"75px",justifyContent:"center",flexWrap:"wrap"}} id="Inicio">
       <div id="FotoPersonal" style={{height:"auto",display:"flex",flexDirection:"column",justifyContent:"center",alignContent:"center",alignItems:"center"}}>
         <img alt="imagen de julen perez" src={miFoto} loading="lazy" style={{width:"175px",height:"175px",borderRadius:100,marginTop:"15px"}}/>
         <div style={{width:"100%",marginTop:"5px",minWidth:"150px",display:"flex",flexDirection:"row",justifyContent:"center",alignContent:"center",flexWrap:"wrap"}}>
@@ -108,7 +108,7 @@ const App = React.memo(() => {
     </div>
 
 {/*Proyectos*/}
-    <div style={{borderRadius:"50px",background:"linear-gradient(145deg, #454647, #525355)",boxShadow:"9px 9px 18px #1f1f20,-9px -9px 18px #7b7d7e",width:"85%",minWidth:"150px",minHeight:200,display:"flex",flexDirection:"row",marginTop:"45px",justifyContent:"center",flexWrap:"wrap"}} id="Inicio">
+    <div style={{borderRadius:"50px",background:"linear-gradient(145deg, #3e3e3e, #4a4a4a)",boxShadow:"9px 9px 18px #1c1c1c, -9px -9px 18px #6e6e6e",width:"85%",minWidth:"150px",minHeight:200,display:"flex",flexDirection:"row",marginTop:"45px",justifyContent:"center",flexWrap:"wrap"}} id="Inicio">
       <h1 style={{color:"white",textDecoration:"bold",fontFamily:"sans-serif"}}>PROYECTOS</h1>
       <div style={{width:"90%",minWidth:"150px",marginBottom:"10px",display:"flex",flexWrap:"wrap",justifyContent:"center",maxHeight:"300px",overflowY:"auto"}}>
         {proyectos.map((proyecto)=>{
@@ -119,7 +119,7 @@ const App = React.memo(() => {
 
 
 {/*Habilidades */}
-    <div style={{borderRadius:"50px",background:"linear-gradient(145deg, #454647, #525355)",boxShadow:"9px 9px 18px #1f1f20,-9px -9px 18px #7b7d7e",width:"85%",minWidth:"150px",minHeight:200,display:"flex",flexDirection:"row",marginTop:"45px",justifyContent:"center",flexWrap:"wrap"}} id="Inicio">
+    <div style={{borderRadius:"50px",background:"linear-gradient(145deg, #3e3e3e, #4a4a4a)",boxShadow:"9px 9px 18px #1c1c1c, -9px -9px 18px #6e6e6e",width:"85%",minWidth:"150px",minHeight:200,display:"flex",flexDirection:"row",marginTop:"45px",justifyContent:"center",flexWrap:"wrap"}} id="Inicio">
       <h1 style={{color:"white",textDecoration:"bold",fontFamily:"sans-serif"}}>HABILIDADES</h1>
       <div style={{width:"90%",minWidth:"150px",marginBottom:"10px",display:"flex",flexDirection:"columns",justifyContent:"center",alignContent:"center",flexWrap:"wrap",maxHeight:"500px",overflowY:"auto"}} id="Habilidades">
           {habilidades.map((habilidad)=>{
