@@ -43,7 +43,7 @@ const PanelProyecto = ({proyecto}) => {
       {proyecto.nombre}
     </div>
     <div style={{width:"100%",height:"70%",display:"flex",justifyContent:"flex-end",alignItems:"flex-end"}}>
-      {/*<button style={{cursor:"pointer",borderRadius:"500px",display:"flex",alignItems:"center"}}>{<AiFillEye style={{fontSize:"25px"}}/>}</button>*/}
+      <a href={proyecto.url} target='_blank'  style={{cursor:"pointer",borderRadius:"500px",display:"flex",alignItems:"center",marginRight:"2px",marginBottom:"2px"}}>{<AiFillEye style={{fontSize:"25px",color:"white"}}/>}</a>
     </div>
   </div>
 </div>
@@ -121,7 +121,7 @@ const App = React.memo(() => {
 {/*Habilidades */}
     <div style={{borderRadius:"50px",background:"linear-gradient(145deg, #3e3e3e, #4a4a4a)",boxShadow:"9px 9px 18px #1c1c1c, -9px -9px 18px #6e6e6e",width:"85%",minWidth:"150px",minHeight:200,display:"flex",flexDirection:"row",marginTop:"45px",justifyContent:"center",flexWrap:"wrap"}} id="Inicio">
       <h1 style={{color:"white",textDecoration:"bold",fontFamily:"sans-serif"}}>HABILIDADES</h1>
-      <div style={{width:"90%",minWidth:"150px",marginBottom:"10px",display:"flex",flexDirection:"columns",justifyContent:"center",alignContent:"center",flexWrap:"wrap",maxHeight:"500px",overflowY:"auto"}} id="Habilidades">
+      <div style={{width:"90%",minWidth:"150px",marginBottom:"10px",display:"flex",flexDirection:"columns",justifyContent:"center",alignContent:"center",flexWrap:"wrap",maxHeight:"550px",overflowY:"auto"}} id="Habilidades">
           {habilidades.map((habilidad)=>{
             return(<BotonHabilida key={habilidad.name} icon={habilidad.logo}/>)
           })}

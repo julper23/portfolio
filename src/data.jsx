@@ -12,7 +12,7 @@ import NODE from "../assets/skills/NODE.svg"
 
 import Parejas from "../assets/fotosProyectos/juegoJuntaParejas.png"
 import Cronometro from "../assets/fotosProyectos/cronometro.png"
-
+import Calculadora from "../assets/fotosProyectos/calculadora.png"
 import PDF from "../assets/CV_Julen_Perez_Coca.pdf"
 
 export const meGusta = [
@@ -64,6 +64,13 @@ export const redesSociales = [
       tecnologias:"Este proyecto esta hecho con vite, React, Node.js, TypeScrip y JavaScript",
       url:"https://github.com/julper23/cronometro",
       img:Cronometro
+    },
+    {
+      nombre:"Calculadora",
+      descripcion:"Calculadora simple creada con React, JS. Tiene un Hook personalizado con la logica de la calculadora y tienes test unitarios simples para las operaciones",
+      tecnologias:"Este proyecto esta hecho con vite, React, Node.js, TypeScript, JavaScript y Jest",
+      url:"https://github.com/julper23/calculadora",
+      img:Calculadora
     }
   ]
 
