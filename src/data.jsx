@@ -13,6 +13,8 @@ import NODE from "../assets/skills/NODE.svg"
 import Parejas from "../assets/fotosProyectos/juegoJuntaParejas.png"
 import Cronometro from "../assets/fotosProyectos/cronometro.png"
 import Calculadora from "../assets/fotosProyectos/calculadora.png"
+import Ruleta from "../assets/fotosProyectos/ruleta.png"
+
 import PDF from "../assets/CV_Julen_Perez_Coca.pdf"
 
 export const meGusta = [
@@ -71,6 +73,13 @@ export const redesSociales = [
       tecnologias:"Este proyecto esta hecho con vite, React, Node.js, TypeScript, JavaScript y Jest",
       url:"https://github.com/julper23/calculadora",
       img:Calculadora
+    },
+    {
+      nombre:"Ruleta",
+      descripcion:"Ruleta simple creada con React, JS y Canvas.",
+      tecnologias:"Este proyecto esta hecho con vite, React, Node.js, TypeScript, JavaScript y Canvas",
+      url:"https://github.com/julper23/ruletaDeLaSuerte",
+      img:Ruleta
     }
   ]
 
