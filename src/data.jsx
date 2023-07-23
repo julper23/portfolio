@@ -58,6 +58,7 @@ export const redesSociales = [
       descripcion:"Juego donde el usuario tiene que encontrar todas las parejas",
       tecnologias:"Este proyecto esta hecho con vite, React, Node.js, TypeScrip y JavaScript",
       url:"https://github.com/julper23/juegoJuntaLasParejas",
+      //ruta:"/parejas",
       img:Parejas
     },
     {
@@ -65,6 +66,7 @@ export const redesSociales = [
       descripcion:"Cronometro simple donde se puede pausar, parar, reiniciar y retomar una cuenta",
       tecnologias:"Este proyecto esta hecho con vite, React, Node.js, TypeScrip y JavaScript",
       url:"https://github.com/julper23/cronometro",
+      //ruta:"/cronometro",
       img:Cronometro
     },
     {
@@ -72,6 +74,7 @@ export const redesSociales = [
       descripcion:"Calculadora simple creada con React, JS. Tiene un Hook personalizado con la logica de la calculadora y tienes test unitarios simples para las operaciones",
       tecnologias:"Este proyecto esta hecho con vite, React, Node.js, TypeScript, JavaScript y Jest",
       url:"https://github.com/julper23/calculadora",
+      //ruta:"calculadora",
       img:Calculadora
     },
     {
@@ -79,6 +82,7 @@ export const redesSociales = [
       descripcion:"Ruleta simple creada con React, JS y Canvas.",
       tecnologias:"Este proyecto esta hecho con vite, React, Node.js, TypeScript, JavaScript y Canvas",
       url:"https://github.com/julper23/ruletaDeLaSuerte",
+      ruta:"/ruleta",
       img:Ruleta
     }
   ]

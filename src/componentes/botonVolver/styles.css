@@ -1,0 +1,15 @@
+.linkBotonVolver{
+    height: 50px;
+    width: 50px;
+    color: white;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 10000;
+}
+
+.iconoBotonVolver{
+    height: 100%;
+    width: 100%;
+    filter: drop-shadow(0 0 10px #000000);
+}

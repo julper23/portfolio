@@ -1,10 +1,10 @@
 import './styles.css';
 
 import {meGusta, redesSociales, proyectos, habilidades} from "../../data";
-
+import { AiFillGithub } from "react-icons/ai";
 import React, { useEffect, useState, useRef } from 'react';
 import ReactTextTransition, { presets } from "react-text-transition";
-
+import { Link } from 'react-router-dom';
 import colors from "./../../../theme/colors";
 
 import miFoto from "../../../assets/fotoPersonal.jpeg";
@@ -37,7 +37,10 @@ const PanelProyecto = ({proyecto}) => {
       {proyecto.nombre}
     </div>
     <div style={{width:"100%",height:"70%",display:"flex",justifyContent:"flex-end",alignItems:"flex-end"}}>
-      <a href={proyecto.url} target='_blank'  style={{cursor:"pointer",borderRadius:"500px",display:"flex",alignItems:"center",marginRight:"2px",marginBottom:"2px"}}>{<AiFillEye style={{fontSize:"25px",color:"white"}}/>}</a>
+        {proyecto.ruta&&
+        <Link to={proyecto.ruta} style={{cursor:"pointer",borderRadius:"500px",display:"flex",alignItems:"center",marginRight:"2px",marginBottom:"2px"}}>{<AiFillEye style={{fontSize:"25px",color:"white"}}/>}</Link>
+        }
+        <a href={proyecto.url} target='_blank'  style={{cursor:"pointer",borderRadius:"500px",display:"flex",alignItems:"center",marginRight:"2px",marginBottom:"2px"}}>{<AiFillGithub style={{fontSize:"25px",color:"white"}}/>}</a>
     </div>
   </div>
 </div>
@@ -105,12 +108,11 @@ const App = React.memo(() => {
     <div style={{borderRadius:"50px",background:"linear-gradient(145deg, #3e3e3e, #4a4a4a)",boxShadow:"9px 9px 18px #1c1c1c, -9px -9px 18px #6e6e6e",width:"85%",minWidth:"150px",minHeight:200,display:"flex",flexDirection:"row",marginTop:"45px",justifyContent:"center",flexWrap:"wrap"}} id="Inicio">
       <h1 style={{color:"white",textDecoration:"bold",fontFamily:"sans-serif"}}>PROYECTOS</h1>
       <div style={{width:"90%",minWidth:"150px",marginBottom:"10px",display:"flex",flexWrap:"wrap",justifyContent:"center",maxHeight:"300px",overflowY:"auto"}}>
-        {proyectos.map((proyecto)=>{
-          return(<PanelProyecto proyecto={proyecto}/>)
+        {proyectos.map((proyecto,index)=>{
+          return(<PanelProyecto key={index} proyecto={proyecto}/>)
         })}
       </div>
     </div>
-
 
 {/*Habilidades */}
     <div style={{borderRadius:"50px",background:"linear-gradient(145deg, #3e3e3e, #4a4a4a)",boxShadow:"9px 9px 18px #1c1c1c, -9px -9px 18px #6e6e6e",width:"85%",minWidth:"150px",minHeight:200,display:"flex",flexDirection:"row",marginTop:"45px",justifyContent:"center",flexWrap:"wrap"}} id="Inicio">
