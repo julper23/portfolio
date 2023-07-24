@@ -1,5 +1,4 @@
 import BotonVolver from "../../componentes/botonVolver";
-//<BotonVolver/>
 import { useState,useEffect } from 'react'
 import './styles.css'
 import { Table } from 'antd';
@@ -232,8 +231,9 @@ function Ruleta() {
 
   return (
     <main>
-      <div className="contenedor">
-        <h1 style={{height:"45px",fontSize:"45px"}}>{winner&&winner}</h1>
+      <BotonVolver/>
+      <div className="ruleta_contenedor">
+        <h1  className='ruleta_ganador'>{winner&&winner}</h1>
         <div style={{display:"flex",flexDirection:"row",flexWrap:"wrap",alignItems:"flex-start",justifyContent:"space-evenly",alignContent:"center"}}>
         <div className="concursantes">
           <div className="canvas-container">
@@ -248,7 +248,7 @@ function Ruleta() {
             <button className='botones' onClick={() => { sortear() }} disabled={isSpinning}>
               <span id="idestado" >{"Sortear"}</span>
             </button>
-            <button style={{marginRight:"10px",height:"25px",width:"25px",borderStyle:"none",backgroundColor:"transparent ",zIndex:"1000"}}>
+            <button style={{marginRight:"10px",height:"50px",width:"50px",borderStyle:"none",backgroundColor:"transparent ",zIndex:"1000"}}>
               <AiFillSetting onClick={()=>{setOpciones(!opciones)}}style={{height:"100%",width:"100%",cursor:"pointer"}}/>
             </button>
           </div>
