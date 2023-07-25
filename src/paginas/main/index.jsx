@@ -9,10 +9,8 @@ import colors from "./../../../theme/colors";
 
 import miFoto from "../../../assets/fotoPersonal.jpeg";
 
-import Header from '../../componentes/header';
 import BotonSocial from '../../componentes/botonSocial';
 import { AiFillEye } from "react-icons/ai";
-import Banner from "../../../assets/banner.png"
 
 const BotonHabilida = ({icon}) => {
   return(
