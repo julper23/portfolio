@@ -6,26 +6,27 @@
 
 .ruleta_contenedor{
 	width: 100%;
+  margin-top: 50px;
 	color: #fff;
 	font-family: sans-serif;
 }
 
+.ruleta_ruletaYajustes{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  align-content: center;
+}
 
-
-
-
-
-.concursantes{
+.ruleta_concursantes{
 	margin-top: 20px;
 	text-align: center;
 	position: relative;
 }
 
-canvas{
-	position: relative;
-	z-index: 1;
-}
-.canvas-container {
+.ruleta_canvasContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,10 +34,29 @@ canvas{
   height: 100%;
 }
 
-#idcanvas {
+.ruleta_seleccionador{
+  position:absolute;
+  top:0;
+  background-color: red;
+  height: 100px;
+  width: 100px;
+  clip-path: polygon(49px 50px, 35px 0, 65px 0);
+  z-index: 10;
+}
+
+.ruleta_canvas{
+	position: relative;
+	z-index: 1;
   max-width: 100%;
   max-height: 100%;
 }
+
+
+
+
+
+
+
 
 .mark-winner{
 	position: absolute;
@@ -50,15 +70,7 @@ canvas{
 	box-shadow: 0 0 3px #33333399;
 }
 
-.centrado{
-  position:absolute;
-  top:0;
-  background-color: red;
-  height: 100px;
-  width: 100px;
-  clip-path: polygon(49px 50px, 35px 0, 65px 0);
-  z-index: 10;
-}
+
 
 .small .react-colorful {
   width: 100px;
@@ -72,9 +84,14 @@ canvas{
 .botones {
   background-color: yellow;
   border-radius: 50px;
+  z-index: 10;
   padding: 5px;
   font-size: xx-large;
   border:1px solid black;
   font-weight: bold;
   cursor: pointer;
-} 
+}
+
+.tablaConcursantes{
+  z-index: 2;
+}
