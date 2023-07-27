@@ -66,7 +66,7 @@ export const redesSociales = [
       descripcion:"Cronometro simple donde se puede pausar, parar, reiniciar y retomar una cuenta",
       tecnologias:"Este proyecto esta hecho con vite, React, Node.js, TypeScrip y JavaScript",
       url:"https://github.com/julper23/cronometro",
-      //ruta:"/cronometro",
+      ruta:"/cronometro",
       img:Cronometro
     },
     {

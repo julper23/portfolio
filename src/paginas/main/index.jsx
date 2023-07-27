@@ -5,26 +5,17 @@ import { AiFillGithub } from "react-icons/ai";
 import React, { useEffect, useState, useRef } from 'react';
 import ReactTextTransition, { presets } from "react-text-transition";
 import { Link } from 'react-router-dom';
-import colors from "./../../../theme/colors";
 
 import miFoto from "../../../assets/fotoPersonal.jpeg";
 
 import BotonSocial from '../../componentes/botonSocial';
+import Main from '../../componentes/main';
+
 import { AiFillEye } from "react-icons/ai";
 
 const BotonHabilida = ({icon}) => {
   return(
     <button style={{height:"100px",width:"100px",margin:"2px",borderRadius:"15px",cursor:"pointer"}}>{<img alt="icono" style={{maxWidth:"100%",maxHeight:"100%",objectFit:"contain"}} src={icon} loading="lazy"/>}</button>
-  )
-}
-
-const Separador = () => {
-  return(<div style={{height:"15px",backgroundColor:colors.primary}}/>)
-}
-
-const Titulo = ({texto}) => {
-  return(
-    <h1 style={{width:"100%",minWidth:"150px",display:"flex",flexDirection:"columns",justifyContent:"center",alignContent:"center",flexWrap:"wrap"}}>{texto}</h1>
   )
 }
 
@@ -66,9 +57,7 @@ const App = React.memo(() => {
   const [checked,setChecked] = useState(false)
 
 
-  return (<main style={{display:"flex",flexDirection:"column",alignItems:"center"}}>
-    <header style={{position:"fixed",backgroundColor:"black",width:"100%",height:"50px",zIndex:"999999"}}></header>
-
+  return (<Main principal={true}>
 {/*SECCION PRINCIPAL*/}
     <div style={{borderRadius:"50px",background:"linear-gradient(145deg, #3e3e3e, #4a4a4a)",boxShadow:"9px 9px 18px #1c1c1c, -9px -9px 18px #6e6e6e",width:"85%",minWidth:"150px",minHeight:200,display:"flex",flexDirection:"row",marginTop:"75px",justifyContent:"center",flexWrap:"wrap"}} id="Inicio">
       <div id="FotoPersonal" style={{height:"auto",display:"flex",flexDirection:"column",justifyContent:"center",alignContent:"center",alignItems:"center"}}>
@@ -103,17 +92,16 @@ const App = React.memo(() => {
     </div>
 
 {/*Proyectos*/}
-    <div style={{borderRadius:"50px",background:"linear-gradient(145deg, #3e3e3e, #4a4a4a)",boxShadow:"9px 9px 18px #1c1c1c, -9px -9px 18px #6e6e6e",width:"85%",minWidth:"150px",minHeight:200,display:"flex",flexDirection:"row",marginTop:"45px",justifyContent:"center",flexWrap:"wrap"}} id="Inicio">
+    <div style={{borderRadius:"50px",background:"linear-gradient(145deg, #3e3e3e, #4a4a4a)",boxShadow:"9px 9px 18px #1c1c1c, -9px -9px 18px #6e6e6e",width:"85%",minWidth:"150px",minHeight:200,display:"flex",flexDirection:"column",marginTop:"45px",justifyContent:"center",flexWrap:"wrap",alignContent:"center",alignItems:"center"}} id="Inicio">
       <h1 style={{color:"white",textDecoration:"bold",fontFamily:"sans-serif"}}>PROYECTOS</h1>
-      <div style={{width:"90%",minWidth:"150px",marginBottom:"10px",display:"flex",flexWrap:"wrap",justifyContent:"center",maxHeight:"300px",overflowY:"auto"}}>
+      <div style={{width:"90%",minWidth:"150px",marginBottom:"10px",display:"flex",flexDirection:"columns",justifyContent:"center",alignContent:"center",flexWrap:"wrap",maxHeight:"550px",overflowY:"auto"}} id="Habilidades">
         {proyectos.map((proyecto,index)=>{
           return(<PanelProyecto key={index} proyecto={proyecto}/>)
         })}
-      </div>
+        </div>
     </div>
-
 {/*Habilidades */}
-    <div style={{borderRadius:"50px",background:"linear-gradient(145deg, #3e3e3e, #4a4a4a)",boxShadow:"9px 9px 18px #1c1c1c, -9px -9px 18px #6e6e6e",width:"85%",minWidth:"150px",minHeight:200,display:"flex",flexDirection:"row",marginTop:"45px",justifyContent:"center",flexWrap:"wrap"}} id="Inicio">
+    <div style={{borderRadius:"50px",background:"linear-gradient(145deg, #3e3e3e, #4a4a4a)",boxShadow:"9px 9px 18px #1c1c1c, -9px -9px 18px #6e6e6e",width:"85%",minWidth:"150px",minHeight:200,display:"flex",flexDirection:"column",marginTop:"45px",justifyContent:"center",flexWrap:"wrap",alignContent:"center",alignItems:"center"}} id="Inicio">
       <h1 style={{color:"white",textDecoration:"bold",fontFamily:"sans-serif"}}>HABILIDADES</h1>
       <div style={{width:"90%",minWidth:"150px",marginBottom:"10px",display:"flex",flexDirection:"columns",justifyContent:"center",alignContent:"center",flexWrap:"wrap",maxHeight:"550px",overflowY:"auto"}} id="Habilidades">
           {habilidades.map((habilidad)=>{
@@ -122,11 +110,8 @@ const App = React.memo(() => {
         </div>
     </div>
     
-
-
-    
     <footer style={{height:"45px"}}></footer>
-  </main>)
+  </Main>)
 });
 
 export default App;

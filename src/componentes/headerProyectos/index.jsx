@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
 import './style.css';
+
+import React from 'react';
 
 import BotonVolver from '../botonVolver';
 
-const HeaderProyectos = () => {
-  return(<header className="header"><BotonVolver/></header>)
+const HeaderProyectos = (props) => {
+  return(<header className="header">{!props.principal&&<BotonVolver/>}</header>)
 }
 
 export default HeaderProyectos

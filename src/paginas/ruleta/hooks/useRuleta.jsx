@@ -38,7 +38,6 @@ export default function useRuleta() {
       }else{
         cambios.splice(-nConcursantes)
       }
-      
       setConcursantes(cambios)
     }
   }

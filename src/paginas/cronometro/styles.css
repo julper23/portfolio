@@ -1,0 +1,76 @@
+.cronometro_contenedor{
+    height: calc(100vh - 50px);
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+  
+
+@font-face {
+    font-family: 'Oxanium';
+    src: url('./assets/fonts/Oxanium/Oxanium-VariableFont_wght.ttf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.cronometro_timer {
+    text-align: center;
+    color: greenyellow;
+    text-shadow: 2px 1px #d22d65;
+    font-size: 5rem;
+    font-family: Oxanium,sans-serif;
+    position: relative;
+    font-variant: full-width;
+  }
+  
+  .cronometro_milliSeconds {
+    font-size: 2rem;
+  }
+  
+  .cronometro_botonera{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .cronometro_boton{
+    margin: 5px;
+    height: 5rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    font-weight: 500;
+    font-family: sans-serif;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.87);
+    transition: border-color 0.25s;
+    width: 160px;
+  }
+
+.cronometro_boton:hover {
+    border-color: #646cff;
+  }
+
+.cronometro_boton:focus,
+.cronometro_boton:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+}
+
+.cronometro_boton:disabled {
+    color:rgba(105, 105, 105, 0.87);
+}
+
+.cronometro_boton:disabled {
+    border-color: transparent;
+    cursor: not-allowed;
+}
