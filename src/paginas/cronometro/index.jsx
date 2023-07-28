@@ -7,7 +7,6 @@ import useCronometro from './hooks/useCronometro'
 function Cronometro() {
     const {timeFormat,startC,pauseC,pause,stopC,diff} = useCronometro();
   
-  
     return (<Main principal={false}>
         <div className='cronometro_contenedor'>
             <h1 className='cronometro_timer'>
@@ -20,13 +19,6 @@ function Cronometro() {
                 <button className='cronometro_boton' onClick={()=>{stopC()}} disabled={!diff}> {"Stop"} </button>
             </div>
         </div>
-
-
-
-
-
-
-
     </Main>);
   }
   
