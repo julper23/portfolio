@@ -6,11 +6,10 @@ import React, { useEffect, useState, useRef } from 'react';
 import ReactTextTransition, { presets } from "react-text-transition";
 import { Link } from 'react-router-dom';
 
-import miFoto from "../../../assets/fotoPersonal.jpeg";
+import miFoto from "../../../assets/fotoPersonal.webp";
 
 import BotonSocial from '../../componentes/botonSocial';
 import Main from '../../componentes/main';
-import Parejas from "../../../assets/fotosProyectos/juegoJuntaParejas.png"
 import { AiFillEye } from "react-icons/ai";
 
 const BotonHabilida = ({icon}) => {
@@ -40,7 +39,7 @@ const PanelProyecto = ({proyecto}) => {
 const PanelNewProyecto = ({proyecto}) => {return( 
         <div style={{height:"400px",minHeight:"400px",width:"328px",backgroundColor:"#5d5d5d",margin:"5px",display:"flex",flexDirection:"column",borderRadius:"10px",overflow:"hidden"}}>
           <div style={{width:"100%",height:"50%"}}>
-            <img  src={ proyecto.img} style={{width:"100%",height:"100%",objectFit:"contain"}}></img >
+            <img  src={ proyecto.img} alt={"imagen del proyecto"+proyecto.nombre} style={{width:"100%",height:"100%",objectFit:"contain"}}></img >
           </div>
           <div style={{width:"100%",height:"50%",display:"flex",flexDirection:"column"}}>
             <div style={{width:"100%",height:"50%",display:"flex",justifyContent:"center"}}>

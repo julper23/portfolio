@@ -10,10 +10,10 @@ import REACT from "../assets/skills/REACT.png"
 import TS from "../assets/skills/TS.png"
 import NODE from "../assets/skills/NODE.svg"
 
-import Parejas from "../assets/fotosProyectos/juegoJuntaParejas.png"
-import Cronometro from "../assets/fotosProyectos/cronometro.png"
-import Calculadora from "../assets/fotosProyectos/calculadora.png"
-import Ruleta from "../assets/fotosProyectos/ruleta.png"
+import Parejas from "../assets/fotosProyectos/juegoJuntaParejas.webp"
+import Cronometro from "../assets/fotosProyectos/cronometro.webp"
+import Calculadora from "../assets/fotosProyectos/calculadora.webp"
+import Ruleta from "../assets/fotosProyectos/ruleta.webp"
 
 import PDF from "../assets/CV_Julen_Perez_Coca.pdf"
 

@@ -1,10 +1,31 @@
 <!DOCTYPE html>
-<html translate="no">
+<html translate="no" lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Author: Julen Perez">
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="preload" as="image" href="./assets/fotoPersonal.webp" />
+    <link rel="preload" as="image" href="./assets/fotosProyectos/juegoJuntaParejas.webp" />
+    <link rel="preload" as="image" href="./assets/fotosProyectos/cronometro.webp" />
+    <link rel="preload" as="image" href="./assets/fotosProyectos/calculadora.webp" />
+    <link rel="preload" as="image" href="./assets/fotosProyectos/ruleta.webp" />
+    <script>
+
+      var images = ["./assets/fotoPersonal.webp","./assets/fotosProyectos/juegoJuntaParejas.webp","./assets/fotosProyectos/cronometro.webp","./assets/fotosProyectos/calculadora.webp","./assets/fotosProyectos/ruleta.webp"];
+    
+      function preload() {
+        for (var i = 0; i < images.length; i++) {
+          
+            images[i] = new Image();
+            console.log(images[i]);
+            images[i].src = preload.arguments[i];
+        }
+      }
+    
+      preload()
+    
+      </script>
     <title>Julen Portfolio</title>
   </head>
   <body>

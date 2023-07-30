@@ -7,7 +7,7 @@ import ReactTextTransition, { presets } from "react-text-transition";
 
 import colors from "./../theme/colors";
 
-import miFoto from "../assets/fotoPersonal.jpeg";
+import miFoto from "../assets/fotoPersonal.webp";
 
 import Header from './componentes/header';
 import BotonSocial from './componentes/botonSocial';
