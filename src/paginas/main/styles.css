@@ -91,6 +91,40 @@
     transition: opacity 0.3s ease;
   }
   
-  .contenedor:hover .tarjeta-informacion {
-    opacity: 1;
-  }
+.contenedor:hover .tarjeta-informacion {
+  opacity: 1;
+}
+
+.contenedorListaTitulo{
+  width: 85%;
+  min-width: 150px;
+  min-height: 200px;
+  border-radius: 50px;
+  background-color: linear-gradient(145deg, #3e3e3e, #4a4a4a);
+  box-shadow: 9px 9px 18px #1c1c1c, -9px -9px 18px #6e6e6e;
+  display: flex;
+  flex-direction: column;
+  margin-top: 45px;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+}
+
+.contenedorLista{
+  width: 90%;
+  min-width: 150px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  max-height: 550px;
+  overflow-y: auto;
+}
+
+.tituloListas{
+  color: white;
+  text-decoration: bold;
+  font-family: sans-serif;
+}

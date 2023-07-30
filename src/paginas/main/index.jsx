@@ -10,7 +10,7 @@ import miFoto from "../../../assets/fotoPersonal.jpeg";
 
 import BotonSocial from '../../componentes/botonSocial';
 import Main from '../../componentes/main';
-
+import Parejas from "../../../assets/fotosProyectos/juegoJuntaParejas.png"
 import { AiFillEye } from "react-icons/ai";
 
 const BotonHabilida = ({icon}) => {
@@ -37,6 +37,29 @@ const PanelProyecto = ({proyecto}) => {
   )
 }
 
+const PanelNewProyecto = ({proyecto}) => {return( 
+        <div style={{height:"400px",minHeight:"400px",width:"328px",backgroundColor:"#5d5d5d",margin:"5px",display:"flex",flexDirection:"column",borderRadius:"10px",overflow:"hidden"}}>
+          <div style={{width:"100%",height:"50%"}}>
+            <img  src={ proyecto.img} style={{width:"100%",height:"100%",objectFit:"contain"}}></img >
+          </div>
+          <div style={{width:"100%",height:"50%",display:"flex",flexDirection:"column"}}>
+            <div style={{width:"100%",height:"50%",display:"flex",justifyContent:"center"}}>
+              <p style={{color:"white",fontSize:"x-large",fontFamily:"sans-serif"}}>{proyecto.nombre}</p>
+            </div>
+            <div style={{width:"100%",height:"50%"}}>
+            <div style={{width:"100%",height:"100%",display:"flex",justifyContent:"flex-end",alignItems:"flex-end"}}>
+              
+            {proyecto.ruta&&
+              <Link to={proyecto.ruta} style={{cursor:"pointer",borderRadius:"500px",display:"flex",alignItems:"center",marginRight:"2px",marginBottom:"2px"}}>{<AiFillEye style={{fontSize:"25px",color:"white"}}/>}</Link>
+              }
+              <a href={proyecto.url} target='_blank'  style={{cursor:"pointer",borderRadius:"500px",display:"flex",alignItems:"center",marginRight:"2px",marginBottom:"2px"}}>{<AiFillGithub style={{fontSize:"25px",color:"white"}}/>}</a>
+          </div>
+            </div>
+            
+          </div>
+        </div>
+)}
+
 const App = React.memo(() => {
 
   const intvl = useRef(null);
@@ -59,9 +82,9 @@ const App = React.memo(() => {
 
   return (<Main principal={true}>
 {/*SECCION PRINCIPAL*/}
-    <div style={{borderRadius:"50px",background:"linear-gradient(145deg, #3e3e3e, #4a4a4a)",boxShadow:"9px 9px 18px #1c1c1c, -9px -9px 18px #6e6e6e",width:"85%",minWidth:"150px",minHeight:200,display:"flex",flexDirection:"row",marginTop:"75px",justifyContent:"center",flexWrap:"wrap"}} id="Inicio">
+    <div style={{width:"95%",minWidth:"150px",minHeight:200,display:"flex",flexDirection:"row",marginTop:"75px",justifyContent:"center",flexWrap:"wrap"}} id="Inicio">
       <div id="FotoPersonal" style={{height:"auto",display:"flex",flexDirection:"column",justifyContent:"center",alignContent:"center",alignItems:"center"}}>
-        <img alt="imagen de julen perez" src={miFoto} loading="lazy" style={{width:"175px",height:"175px",borderRadius:100,marginTop:"15px"}}/>
+        <img alt="imagen de julen perez" src={miFoto} style={{width:"200px",height:"200px",borderRadius:100,marginTop:"15px"}}/>
         <div style={{width:"100%",marginTop:"5px",minWidth:"150px",display:"flex",flexDirection:"row",justifyContent:"center",alignContent:"center",flexWrap:"wrap"}}>
           {redesSociales.map((rrss)=>{
             return(<BotonSocial key={rrss.name} rrss={rrss}/>)
@@ -92,18 +115,18 @@ const App = React.memo(() => {
     </div>
 
 {/*Proyectos*/}
-    <div style={{borderRadius:"50px",background:"linear-gradient(145deg, #3e3e3e, #4a4a4a)",boxShadow:"9px 9px 18px #1c1c1c, -9px -9px 18px #6e6e6e",width:"85%",minWidth:"150px",minHeight:200,display:"flex",flexDirection:"column",marginTop:"45px",justifyContent:"center",flexWrap:"wrap",alignContent:"center",alignItems:"center"}} id="Inicio">
-      <h1 style={{color:"white",textDecoration:"bold",fontFamily:"sans-serif"}}>PROYECTOS</h1>
-      <div style={{width:"90%",minWidth:"150px",marginBottom:"10px",display:"flex",flexDirection:"columns",justifyContent:"center",alignContent:"center",flexWrap:"wrap",maxHeight:"550px",overflowY:"auto"}} id="Habilidades">
+    <div style={{borderRadius:"50px",background:"linear-gradient(145deg, #3e3e3e, #4a4a4a)",boxShadow:"9px 9px 18px #1c1c1c, -9px -9px 18px #6e6e6e",width:"85%",minWidth:"150px",minHeight:"550px",display:"flex",flexDirection:"column",marginTop:"45px",justifyContent:"center",flexWrap:"wrap",alignContent:"center",alignItems:"center"}}>
+      <h1 className='tituloListas'>PROYECTOS</h1>
+      <div style={{height:"450px",width:"90%",display:"flex",flexDirection:"column",alignItems:"center",flexFlow:"wrap",overflowY:"auto",justifyContent:"center",marginBottom:"15px"}}>
         {proyectos.map((proyecto,index)=>{
-          return(<PanelProyecto key={index} proyecto={proyecto}/>)
+          return(<PanelNewProyecto key={index} proyecto={proyecto}/>)
         })}
-        </div>
+      </div>
     </div>
 {/*Habilidades */}
     <div style={{borderRadius:"50px",background:"linear-gradient(145deg, #3e3e3e, #4a4a4a)",boxShadow:"9px 9px 18px #1c1c1c, -9px -9px 18px #6e6e6e",width:"85%",minWidth:"150px",minHeight:200,display:"flex",flexDirection:"column",marginTop:"45px",justifyContent:"center",flexWrap:"wrap",alignContent:"center",alignItems:"center"}} id="Inicio">
       <h1 style={{color:"white",textDecoration:"bold",fontFamily:"sans-serif"}}>HABILIDADES</h1>
-      <div style={{width:"90%",minWidth:"150px",marginBottom:"10px",display:"flex",flexDirection:"columns",justifyContent:"center",alignContent:"center",flexWrap:"wrap",maxHeight:"550px",overflowY:"auto"}} id="Habilidades">
+      <div style={{width:"90%",minWidth:"150px",marginBottom:"10px",display:"flex",flexDirection:"columns",justifyContent:"center",alignContent:"center",flexFlow:"wrap",maxHeight:"550px",overflowY:"auto"}} id="Habilidades">
           {habilidades.map((habilidad)=>{
             return(<BotonHabilida key={habilidad.name} icon={habilidad.logo}/>)
           })}

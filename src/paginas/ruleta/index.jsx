@@ -5,13 +5,13 @@ import { useState,useEffect } from 'react'
 import { HexColorPicker } from "react-colorful";
 import { AiFillSetting, AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 
-import { Table } from 'antd';
+import { Table, Switch } from 'antd';
 
 import useRuleta from './hooks/useRuleta';
 
 import Main from '../../componentes/main';
 import createRuleta from './utiles/createRuleta';
-import { Switch } from 'antd';
+
 
 
 
