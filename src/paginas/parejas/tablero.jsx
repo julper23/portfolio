@@ -1,5 +1,7 @@
+import "./tablero.css";
+
 import React from 'react';
-import "./tablero.css"
+
 import Carta from './carta';
 
 export default function Tablero({baraja,parejaSeleccionada,seleccionarCarta}) {
