@@ -1,0 +1,86 @@
+.parejas_header{
+    margin-top: 50px;
+    height:50px;
+    width: 100%;
+    display: flex;
+    flex-flow: wrap;
+    align-content: center;
+    position: fixed;
+}
+
+.parejas_h_reiniciarContainer{
+    min-width: 110px;
+    width: calc(10% + 110px);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 10px;
+}
+
+.parejas_h_reiniciarButton{
+    margin: 5px;
+    height: 2.3rem;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    font-weight: 500;
+    font-family: sans-serif;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.87);
+    transition: border-color 0.25s;
+    width: 110px;
+  }
+
+.parejas_h_reiniciarButton:hover {
+    border-color: #646cff;
+}
+
+.parejas_h_reiniciarButton:disabled {
+    color:rgba(105, 105, 105, 0.87);
+}
+
+.parejas_h_ganadorContainer{
+    width: calc(70% - 120px);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.parejas_h_ganadorSContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parejas_h_ganadorIcono{
+    color: white;
+    font-size: 1.5em;
+}
+
+.parejas_h_ganadorIconoIzq{
+    transform: rotateY(180deg);
+}
+
+.parejas_h_ganadorText{
+    color: white;
+    font-size: 1.5em;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.parejas_h_intentos{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5em;
+}

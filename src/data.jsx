@@ -52,13 +52,21 @@ export const redesSociales = [
     }
   ]
 
+  export const experiencias = [
+    {
+      empresa: "Ceit",
+      puesto: "Desarrollador FrontEnd",
+      tecnologias: ["react","react-native","node","javaScript","HTML","CSS","postgres"]
+    }
+  ]
+
   export const proyectos = [
     {
       nombre:"Juego busca parejas",
       descripcion:"Juego donde el usuario tiene que encontrar todas las parejas",
       tecnologias:"Este proyecto esta hecho con vite, React, Node.js, TypeScrip y JavaScript",
       url:"https://github.com/julper23/juegoJuntaLasParejas",
-      //ruta:"/parejas",
+      ruta:"/parejas",
       img:Parejas
     },
     {

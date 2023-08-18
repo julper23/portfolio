@@ -94,3 +94,9 @@
 .contenedor:hover .tarjeta-informacion {
   opacity: 1;
 }
+
+/*
+* {
+  scrollbar-gutter: stable;
+}
+*/

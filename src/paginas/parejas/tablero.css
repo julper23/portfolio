@@ -1,0 +1,33 @@
+
+.parejas_tableroContainer{
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    position: fixed;
+}
+
+.parejas_tablero{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    overflow: auto;
+    scrollbar-gutter: stable both-edges;
+}
+
+@media (min-width: 790px) {
+    .parejas_tablero{
+        width: 700px;
+        height: 516px;
+    }
+}
+
+@media (max-width: 790px) {
+    .parejas_tablero{
+        width: 80%;
+        height: 65%;
+    }
+}
