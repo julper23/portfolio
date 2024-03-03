@@ -1,7 +1,7 @@
 import './styles.css'
 import { useEffect, useState } from "react";
 import Main from '../../componentes/main';
-
+import { FaArrowDown,FaArrowLeft, FaArrowRight, FaArrowUp } from "react-icons/fa";
 const TableroSnake = () => {
     const [tablero,setTablero] = useState([]);
     const [serpiente,setSerpiente] = useState([{a:10,b:5}]);
@@ -76,8 +76,9 @@ const TableroSnake = () => {
             updateComida(serp)
         }
     }
-
+    
     const handleKeyDown = (event) => {
+        console.log(event);
         switch(event.key){
             case 'ArrowUp':
                 comprobarPosicion({a: serpiente[0].a - 1, b: serpiente[0].b});
@@ -135,35 +136,18 @@ const TableroSnake = () => {
             document.removeEventListener('keydown', handleKeyDown);
         };
     }, [serpiente,tablero]);
-    const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
-    function getWindowDimensions() {
-        const { innerWidth: width, innerHeight: height } = window;
-        return {
-          width,
-          height
-        };
-      }
-    useEffect(() => {
-      function handleResize() {
-        setWindowDimensions(getWindowDimensions());
-      }
-  
-      window.addEventListener('resize', handleResize);
-      return () => window.removeEventListener('resize', handleResize);
-    }, []);    useEffect(()=>{
-        console.log(windowDimensions);
-        console.log(windowDimensions.height>windowDimensions.width);
-    },[windowDimensions])
 
-    const BotoneraSnake = (onClickBotoneraSnake) => {
-        return (<div>
-            <div>
-            <button> UP </button>
+    const BotoneraSnake = ({onClickBotoneraSnake}) => {
+        return (<div className='botonera'>
+
+            <div className='botonesSnakeIzquierda'>
+            <button className='botonSnake' onClick={()=>{onClickBotoneraSnake({key:"ArrowLeft"})}}> <FaArrowLeft className='iconButtonSnake'/> </button>
+            
+            <button className='botonSnake' onClick={()=>{onClickBotoneraSnake({key:"ArrowRight"})}}> <FaArrowRight className='iconButtonSnake'/> </button>
             </div>
-            <div>
-            <button> Left </button>
-            <button> Down </button>
-            <button> Right </button>
+            <div className='botonesSnakeDerecha'>
+            <button className='botonSnake' onClick={()=>{onClickBotoneraSnake({key:"ArrowUp"})}}> <FaArrowUp className='iconButtonSnake'/> </button>
+            <button className='botonSnake' onClick={()=>{onClickBotoneraSnake({key:"ArrowDown"})}}> <FaArrowDown className='iconButtonSnake'/> </button>
             </div>
         </div>)
     }
@@ -173,17 +157,17 @@ const TableroSnake = () => {
             {
                 tablero.length > 0 && tablero.map((fila,indexFila) => {
                     return(
-                        <div className='tableroFila' style={{height:windowDimensions.height>windowDimensions.width? "25px": "25px"}}key={indexFila}>
+                        <div className='tableroFila' key={indexFila}>
                             {fila.map((posicion,indexColumna) => {
                                 return(
-                                    <div className={`tableroCell color-${colorCelda({posicion,serpiente,indexFila,indexColumna})}`} style={{height:windowDimensions.height<windowDimensions.width? "25px": "25px",width:windowDimensions.height>windowDimensions.width? "25px": "25px"}}  key={indexFila+"-"+indexColumna}/>
+                                    <div className={`tableroCell color-${colorCelda({posicion,serpiente,indexFila,indexColumna})} ${"celda-"+indexFila+"-"+indexColumna}`}  key={indexFila+"-"+indexColumna}/>
                                 );
                             })}
                         </div>
                     );
                 })
             }
-            <BotoneraSnake onClickBotoneraSnake={handleKeyDown}/>
+            <BotoneraSnake onClickBotoneraSnake={(e)=>handleKeyDown(e)}/>
         </div>
     );
 };
