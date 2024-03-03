@@ -1,11 +1,6 @@
 .parejas_carta{
     width: 125px;
     height: 125px;
-    margin: 2px;
-}
-
-.parejas_cartaNoEstatica{
-    cursor: pointer;
 }
 
 .parejas_C_portada{
@@ -21,6 +16,40 @@
     justify-content: center;
     align-items: center;
     background-color: rgb(3, 220, 244);
+}
+
+@media (max-width: 635px) {
+    .parejas_carta{
+        width: 100px;
+        height: 100px;
+    }
+    .parejas_C_portada{
+        width: 100px;
+        height: 100px;
+    }
+    .parejas_C_contenido{
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 555px) {
+    .parejas_carta{
+        width: 75px;
+        height: 75px;
+    }
+    .parejas_C_portada{
+        width: 75px;
+        height: 75px;
+    }
+    .parejas_C_contenido{
+        width: 75px;
+        height: 75px;
+    }
+}
+
+.parejas_cartaNoEstatica{
+    cursor: pointer;
 }
 
 .ReactFlipCard{

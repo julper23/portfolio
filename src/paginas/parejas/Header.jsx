@@ -10,11 +10,6 @@ export default function Header({reiniciarPartida,ganador,intentos}) {
             </div>
 
             <div className={"parejas_h_ganadorContainer"}>
-                {ganador&&<div className="parejas_h_ganadorSContainer">
-                    <MdOutlineCelebration className="parejas_h_ganadorIcono parejas_h_ganadorIconoIzq"/>
-                    <p className='parejas_h_ganadorText'>GANASTE</p>
-                    <MdOutlineCelebration className="parejas_h_ganadorIcono"/>
-                </div>}
             </div>
 
             <div className='parejas_h_intentos'>Intentos: {intentos}</div>

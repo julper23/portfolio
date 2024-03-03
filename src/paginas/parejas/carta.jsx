@@ -11,7 +11,7 @@ export default function Carta({icono,comparando,adivinada,seleccionarCarta}) {
             <ReactCardFlip isFlipped={comparando || adivinada}>
                 <div className="parejas_C_portada" key="front"/>
                 <div className="parejas_C_contenido" key="back">
-                    <i className={`fa ${icono} fa-5x`}/>
+                    <i className={`fa ${icono} fa-4x`}/>
                 </div>
             </ReactCardFlip>
         </div>
