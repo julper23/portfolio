@@ -4,7 +4,7 @@ import Main from '../../componentes/main';
 
 const TableroSnake = () => {
     const [tablero,setTablero] = useState([]);
-    const [serpiente,setSerpiente] = useState([{a:10,b:11}]);
+    const [serpiente,setSerpiente] = useState([{a:10,b:5}]);
     const [comida,setComida] = useState(undefined)
     const move = (newPosition) => {
         let newSerpiente = serpiente.slice();
@@ -24,9 +24,10 @@ const TableroSnake = () => {
         setSerpiente(newSerpiente);
         updateComida(newSerpiente);
     };
+
     const gameOver = () => {
         alert("GAME OVER")
-        setSerpiente([{a:10,b:11}])
+        setSerpiente([{a:10,b:5}])
     }
     const cantMove = (serpiente) => {
         const firstSerpiente = serpiente[0]
@@ -63,8 +64,8 @@ const TableroSnake = () => {
     };
 
     const updateComida = (serp) => {
-        const filaAleatoria = Math.floor(Math.random() * 18) + 1
-        const columnaAleatoria = Math.floor(Math.random() * 18) + 1
+        const filaAleatoria = Math.floor(Math.random() * 19) + 1
+        const columnaAleatoria = Math.floor(Math.random() * 9) + 1
         let posibleTablero = tablero[filaAleatoria][columnaAleatoria] === 0
         let posibleSerpiente = !serp.some(objeto => JSON.stringify(objeto) === JSON.stringify({a:filaAleatoria,b:columnaAleatoria}))
         let posibleComida = comida?.a !== filaAleatoria && comida?.b !== columnaAleatoria
@@ -103,12 +104,12 @@ const TableroSnake = () => {
 
     useEffect(()=>{
         let tableroNew = [];
-        for(let filas = 0; filas<20;filas++){
+        for(let filas = 0; filas<21;filas++){
             let filaNew = [];
-            if(filas === 0 || filas === 19){
-                filaNew.push(2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2);
+            if(filas === 0 || filas === 20){
+                filaNew.push(2,2,2,2,2,2,2,2,2,2,2);
             } else {
-                filaNew.push(2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2);
+                filaNew.push(2,0,0,0,0,0,0,0,0,0,2);
             }
             tableroNew.push(filaNew);
         }
@@ -134,22 +135,55 @@ const TableroSnake = () => {
             document.removeEventListener('keydown', handleKeyDown);
         };
     }, [serpiente,tablero]);
+    const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+    function getWindowDimensions() {
+        const { innerWidth: width, innerHeight: height } = window;
+        return {
+          width,
+          height
+        };
+      }
+    useEffect(() => {
+      function handleResize() {
+        setWindowDimensions(getWindowDimensions());
+      }
+  
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }, []);    useEffect(()=>{
+        console.log(windowDimensions);
+        console.log(windowDimensions.height>windowDimensions.width);
+    },[windowDimensions])
+
+    const BotoneraSnake = (onClickBotoneraSnake) => {
+        return (<div>
+            <div>
+            <button> UP </button>
+            </div>
+            <div>
+            <button> Left </button>
+            <button> Down </button>
+            <button> Right </button>
+            </div>
+        </div>)
+    }
 
     return (
         <div className='tableroSnake'>
             {
                 tablero.length > 0 && tablero.map((fila,indexFila) => {
                     return(
-                        <div className='tableroFila' key={indexFila}>
+                        <div className='tableroFila' style={{height:windowDimensions.height>windowDimensions.width? "25px": "25px"}}key={indexFila}>
                             {fila.map((posicion,indexColumna) => {
                                 return(
-                                    <div className={`tableroCell color-${colorCelda({posicion,serpiente,indexFila,indexColumna})}`}  key={indexFila+"-"+indexColumna}/>
+                                    <div className={`tableroCell color-${colorCelda({posicion,serpiente,indexFila,indexColumna})}`} style={{height:windowDimensions.height<windowDimensions.width? "25px": "25px",width:windowDimensions.height>windowDimensions.width? "25px": "25px"}}  key={indexFila+"-"+indexColumna}/>
                                 );
                             })}
                         </div>
                     );
                 })
             }
+            <BotoneraSnake onClickBotoneraSnake={handleKeyDown}/>
         </div>
     );
 };

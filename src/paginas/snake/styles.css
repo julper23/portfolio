@@ -1,35 +1,32 @@
 .snake_contenedor{
-    height: calc(100vh - 50px);
+    height: 100vh ;
     width: 100%;
-    margin-top: 50px;
     display: flex;
     flex-direction: column;
     align-content: center;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .tableroSnake{
-  background-color: black;
-  height: 80%;
-  width: 80%;
-  border: 1px solid rgba(245, 245, 245, 0.267);
+  height: 100%;
+  width: 100%;
+  background-color: red;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   box-sizing: border-box;
+  padding-top: 25px;
 }
 
 .tableroFila{
-  height: 5%;
-  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
 }
 
 .tableroCell{
-  height: 100%;
-  width: 5%;
   box-sizing: border-box;
 }
 
