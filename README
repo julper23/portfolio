@@ -1,1 +1,6 @@
 # Portpolio
+
+Para iniciar el proyecto:
+
+-> Instalar las dependencias con npm i
+-> Lanzar el comando npm run dev

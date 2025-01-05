@@ -8,6 +8,7 @@ import Ruleta from "./paginas/ruleta";
 import Parejas from "./paginas/parejas";
 import Cronometro from "./paginas/cronometro";
 import Snake from "./paginas/snake";
+import AdivinaNumero from "./paginas/adivinaNumero";
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
       <Route path="/parejas" exact component={Parejas} />
       <Route path="/cronometro" exact component={Cronometro} />
       <Route path="/snake" exact component={Snake} />
+      <Route path="/adivinaNumero" exact component={AdivinaNumero} />
       <Redirect to="/" />
     </Switch>
   </Router>

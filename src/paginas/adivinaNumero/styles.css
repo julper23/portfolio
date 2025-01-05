@@ -1,0 +1,10 @@
+.adivinaNumero_contenedor{
+  height: calc(100vh - 50px);
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
